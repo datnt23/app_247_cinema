@@ -1,3 +1,4 @@
+import 'package:app_247_cinema/view/pages/selectCinema/components/select_country.dart';
 import 'package:flutter/material.dart';
 
 import 'components/custom_header.dart';
@@ -17,19 +18,19 @@ class SelectCinemaPage extends StatelessWidget {
               size: size,
               content: 'Ralph Breaks the\nInternet ',
             ),
-            // SelectCountryWidget(size: size),
-            // buildTitle('Choose Date'),
-            // Padding(
-            //   padding: const EdgeInsets.symmetric(horizontal: 24.0),
-            //   child: Row(
-            //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            //     children: days
-            //         .map((e) => Builder(
-            //               builder: (context) => buildDateWidget(size, e),
-            //             ))
-            //         .toList(),
-            //   ),
-            // ),
+            SelectCountry(size: size),
+            buildTitle('Choose Date'),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: days
+                    .map((e) => Builder(
+                          builder: (context) => buildDateWidget(size, e),
+                        ))
+                    .toList(),
+              ),
+            ),
             // buildTitle('Central Park CGV'),
             // Container(
             //   margin: const EdgeInsets.only(top: 8, bottom: 16),
