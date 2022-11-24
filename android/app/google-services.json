@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "663291322924",
+    "project_id": "app247cinema",
+    "storage_bucket": "app247cinema.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:663291322924:android:3e446d4ec4ccdfa9126789",
+        "android_client_info": {
+          "package_name": "com.example.app_247_cinema"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "663291322924-qpoe7gs57cgsnejmm09ii8rn6845kdt7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9bBe0XTNw8rGliZrGlpIiy2-d-ZvkQwg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "663291322924-qpoe7gs57cgsnejmm09ii8rn6845kdt7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
