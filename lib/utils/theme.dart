@@ -7,4 +7,5 @@ class ThemeColor{
   static const grayWhite = Color(0xFFDFDFDF);
   static const headerBackGround = Color(0xFF0044FF);
   static const starYellow = Color(0xFFFFEB3B);
+  static const darkBackground = Color(0xFF151D3B);
 }

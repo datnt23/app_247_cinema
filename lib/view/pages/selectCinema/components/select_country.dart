@@ -1,3 +1,4 @@
+import 'package:app_247_cinema/src/constants/asset_path.dart';
 import 'package:app_247_cinema/utils/theme.dart';
 import 'package:flutter/material.dart';
 
@@ -9,11 +10,13 @@ class SelectCountry extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(vertical: 16, horizontal: 24),
-      height: size.height / 14,
+      margin: const EdgeInsets.symmetric(vertical: 12, horizontal: 23),
+      height: size.height / 15,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
-        border: Border.all(color: ThemeColor.black),
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(
+          width: 4,
+          color: ThemeColor.black),
       ),
       child: Row(
         children: const [
@@ -22,19 +25,27 @@ class SelectCountry extends StatelessWidget {
               decoration: InputDecoration(
                 hintText: 'Select Your Country',
                 hintStyle: TextStyle(
-                    fontWeight: FontWeight.w200,
-                    fontSize: 20,
-                    height: 1.2,
+                    fontWeight: FontWeight.w300,
+                    fontSize: 18,
+                    height: 1.5,
                     color: ThemeColor.black,
                     decoration: TextDecoration.none),
                 icon: Padding(
-                  padding: EdgeInsets.only(left: 8),
+                  padding: EdgeInsets.only(left: 10),
                   child: ImageIcon(
-                    AssetImage(Ass)
+                    AssetImage(AssetPath.iconLocation),
+                    color: ThemeColor.black,
                   ),
                 ),
-
               ),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.only(right: 10),
+            child: Icon(
+              Icons.keyboard_arrow_down,
+              size: 36,
+              color: ThemeColor.black,
             ),
           ),
         ],

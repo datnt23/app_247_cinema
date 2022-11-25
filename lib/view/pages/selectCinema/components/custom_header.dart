@@ -22,7 +22,7 @@ class CustomHeader extends StatelessWidget {
             child: Text(
               content,
               style: const TextStyle(
-                fontWeight: FontWeight.w400, 
+                fontWeight: FontWeight.w900, 
                 fontSize: 30, 
                 height: 1.2
                 ),
@@ -38,7 +38,7 @@ class CustomHeader extends StatelessWidget {
             },
             icon: const FaIcon(
               FontAwesomeIcons.arrowLeft,
-              color: ThemeColor.white,
+              color: ThemeColor.black,
             ),
           ),
         ),
