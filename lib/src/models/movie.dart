@@ -47,6 +47,21 @@ final List<Movie> movies = [
         AssetPath.trailerRalph2x2
       ]),
   Movie(
+      backgroundImg: AssetPath.backgroundOnePiece,
+      posterImg: AssetPath.posterOnePiece,
+      title: 'ONE PIECE FILM RED',
+      trailerImg: '',
+      casters: [
+        Cast(name: 'Reilly', profileImageUrl: AssetPath.castJohnCReilly),
+        Cast(name: 'Silverman', profileImageUrl: AssetPath.castSarahSilverman),
+        Cast(name: 'McBrayer', profileImageUrl: AssetPath.castJackMcBrayer),
+        Cast(name: 'Henson', profileImageUrl: AssetPath.castTarajiPHenson),
+      ],
+      trailers: [
+        AssetPath.trailerRalph1x2,
+        AssetPath.trailerRalph2x2
+      ]),
+  Movie(
       backgroundImg: AssetPath.backgroundOnward,
       posterImg: AssetPath.posterOnwardx2,
       title: 'Onward',

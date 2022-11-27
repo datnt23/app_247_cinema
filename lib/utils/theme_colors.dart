@@ -8,4 +8,5 @@ class ThemeColor{
   static const headerBackGround = Color(0xFF0044FF);
   static const starYellow = Color(0xFFFFEB3B);
   static const darkBackground = Color(0xFF151D3B);
+  static const red = Color(0xFFFF0000);
 }

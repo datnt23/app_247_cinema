@@ -1,5 +1,5 @@
 import 'package:app_247_cinema/controller/auth_controller.dart';
-import 'package:app_247_cinema/utils/theme.dart';
+import 'package:app_247_cinema/utils/theme_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
@@ -36,7 +36,7 @@ class _LoginScreenState extends State<LoginScreen> {
               const Padding(
                 padding: EdgeInsets.only(top: 16),
                 child: Text(
-                  "Welcome",
+                  "XIN CHÀO!",
                   style: TextStyle(
                     fontSize: 30,
                     color: Colors.black,
@@ -45,7 +45,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
               Text(
-                "Login to book your seat!",
+                "Đăng nhập để đặt vé",
                 style: TextStyle(
                   fontSize: 23,
                   color: Colors.black.withOpacity(0.6),
@@ -67,7 +67,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     const Padding(
                       padding: EdgeInsets.symmetric(horizontal: 10),
                       child: Text(
-                        "Login to your account",
+                        "Đăng Nhập",
                         style: TextStyle(
                           fontSize: 16,
                           color: ThemeColor.black,
@@ -86,7 +86,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           ),
                           fillColor: ThemeColor.grayWhite,
                           filled: true,
-                          hintText: "Email or Phone Number",
+                          hintText: "Email hoặc Số Điện Thoại...",
                           hintStyle: const TextStyle(color: Colors.black54),
                         ),
                       ),
@@ -103,7 +103,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           ),
                           fillColor: ThemeColor.grayWhite,
                           filled: true,
-                          hintText: "Password",
+                          hintText: "Mật Khẩu...",
                           hintStyle: const TextStyle(color: Colors.black54),
                         ),
                       ),
@@ -113,7 +113,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: TextButton(
                         onPressed: () {
                           Get.defaultDialog(
-                              title: "Forgot Password?",
+                              title: "Quên Mật Khẩu!",
                               content: TextFormField(
                                 controller: forgotPasswordController,
                                 decoration: InputDecoration(
@@ -121,7 +121,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                     borderRadius: BorderRadius.circular(10),
                                     borderSide: BorderSide.none,
                                   ),
-                                  hintText: "Email Address",
+                                  hintText: "Nhập Email...?",
                                   hintStyle:
                                       const TextStyle(color: Colors.black45),
                                   fillColor: ThemeColor.grayWhite,
@@ -151,7 +151,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                   child: Padding(
                                     padding: EdgeInsets.all(12),
                                     child: Text(
-                                      "Send to reset Mail",
+                                      "Gửi...",
                                       style: TextStyle(fontSize: 16),
                                     ),
                                   ),
@@ -159,7 +159,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               ));
                         },
                         child: const Text(
-                          "Forgot Password?",
+                          "Quên Mật Khẩu?",
                           style: TextStyle(
                               color: Colors.black54,
                               fontWeight: FontWeight.w600),
@@ -182,7 +182,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         child: Padding(
                           padding: EdgeInsets.all(12),
                           child: Text(
-                            "Login",
+                            "Đăng Nhập",
                             style: TextStyle(fontSize: 16),
                           ),
                         ),
@@ -194,20 +194,20 @@ class _LoginScreenState extends State<LoginScreen> {
                         children: [
                           Expanded(
                             child: Divider(
-                              thickness: 0.5,
+                              thickness: 1,
                               color: Colors.black.withOpacity(0.1),
                             ),
                           ),
                           const Padding(
                             padding: EdgeInsets.symmetric(horizontal: 4),
                             child: Text(
-                              "Or",
+                              "Hoặc",
                               style: TextStyle(color: Color(0xFF9F9F9F)),
                             ),
                           ),
                           Expanded(
                             child: Divider(
-                              thickness: 0.5,
+                              thickness: 1,
                               color: Colors.black.withOpacity(0.1),
                             ),
                           ),
@@ -233,7 +233,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           child: Padding(
                             padding: EdgeInsets.all(12),
                             child: Text(
-                              "Register an Account",
+                              "Đăng Ký",
                               style: TextStyle(
                                   fontSize: 16, color: ThemeColor.backGround),
                             ),

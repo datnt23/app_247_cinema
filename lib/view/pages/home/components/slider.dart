@@ -1,9 +1,8 @@
 import 'package:app_247_cinema/src/models/movie.dart';
-import 'package:app_247_cinema/utils/theme.dart';
+import 'package:app_247_cinema/utils/theme_colors.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
 import '../../selectCinema/select_cinema_page.dart';
 
 class SliderBar extends StatelessWidget {
@@ -121,7 +120,7 @@ class SliderBar extends StatelessWidget {
                                         height: 1.2,
                                         decoration: TextDecoration.none,
                                         color: ThemeColor.white),
-                                  )
+                                  ),
                                 ],
                               ),
                             ),

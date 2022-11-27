@@ -1,8 +1,5 @@
-import 'package:app_247_cinema/utils/theme.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:app_247_cinema/utils/theme_colors.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ArrowBackButton extends StatelessWidget {

@@ -1,4 +1,4 @@
-import 'package:app_247_cinema/utils/theme.dart';
+import 'package:app_247_cinema/utils/theme_colors.dart';
 import 'package:flutter/cupertino.dart';
 
 class MovieTitle extends StatelessWidget {
@@ -12,7 +12,7 @@ class MovieTitle extends StatelessWidget {
         Container(
           margin: const EdgeInsets.only(left: 24, top: 8),
           child: const Text(
-            'Ralph Breaks the Internet',
+            'ONE PIECE FILM RED',
             style: TextStyle(
                 fontWeight: FontWeight.w900,
                 fontSize: 24,
@@ -24,7 +24,7 @@ class MovieTitle extends StatelessWidget {
         Container(
           margin: const EdgeInsets.only(top: 4, left: 24),
           child: const Text(
-            'FX Sudirman XXI',
+            'CGV Vincom Thủ Đức',
             style: TextStyle(
                 fontWeight: FontWeight.w600,
                 fontSize: 20,

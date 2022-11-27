@@ -1,4 +1,4 @@
-import 'package:app_247_cinema/utils/theme.dart';
+import 'package:app_247_cinema/utils/theme_colors.dart';
 import 'package:flutter/material.dart';
 import '../../../src/config/app_color.dart';
 import '../../../src/constants/asset_path.dart';
@@ -29,11 +29,11 @@ class SelectSeatPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   buildSeatStatusBar(
-                      color: DarkTheme.darkBackground, content: 'Available'),
+                      color: DarkTheme.greyBackground, content: 'Ghế Trống'),
                   buildSeatStatusBar(
-                      color: DarkTheme.greyBackground, content: 'Booked'),
+                      color: ThemeColor.red, content: 'Ghế Đã Đặt'),
                   buildSeatStatusBar(
-                      color: DarkTheme.blueMain, content: 'Your Seat'),
+                      color: DarkTheme.blueMain, content: 'Ghế Đang Chọn'),
                 ],
               ),
             ),
@@ -69,7 +69,7 @@ class SelectSeatPage extends StatelessWidget {
             Container(
               alignment: Alignment.center,
               child: const Text(
-                'Screen',
+                'Màn Hình',
                 style: TextStyle(
                   fontWeight: FontWeight.w400,
                   fontSize: 16,
@@ -89,7 +89,7 @@ class SelectSeatPage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: const [
                       Text(
-                        'Total Price',
+                        'Tổng Tiền:',
                         style: TextStyle(
                             fontWeight: FontWeight.w400,
                             fontSize: 20,
@@ -98,7 +98,7 @@ class SelectSeatPage extends StatelessWidget {
                             decoration: TextDecoration.none),
                       ),
                       Text(
-                        '150.000 VND',
+                        '160.000 VND',
                         style: TextStyle(
                             fontWeight: FontWeight.w600,
                             fontSize: 23,
@@ -123,7 +123,7 @@ class SelectSeatPage extends StatelessWidget {
                           color: DarkTheme.blueMain,
                           borderRadius: BorderRadius.circular(16)),
                       child: const Text(
-                        'Book Ticket',
+                        'Đặt Vé',
                         style: TextStyle(
                             fontWeight: FontWeight.w400,
                             fontSize: 23,

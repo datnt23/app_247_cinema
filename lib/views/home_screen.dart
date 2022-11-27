@@ -1,10 +1,14 @@
-import 'package:app_247_cinema/utils/theme.dart';
+import 'package:app_247_cinema/controller/auth_controller.dart';
+import 'package:app_247_cinema/utils/constants.dart';
+import 'package:app_247_cinema/utils/theme_colors.dart';
+import 'package:app_247_cinema/views/profile_user_screen.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-
-import 'components/categoryBar.dart';
-import 'components/coming_soon.dart';
-import 'components/promo.dart';
-import 'components/slider.dart';
+import 'package:flutter/services.dart';
+import 'package:get/get.dart';
+import '../view/pages/home/components/coming_soon.dart';
+import '../view/pages/home/components/promo.dart';
+import '../view/pages/home/components/slider.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -16,7 +20,11 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(
+        const SystemUiOverlayStyle(statusBarColor: ThemeColor.headerBackGround));
     final Size size = MediaQuery.of(context).size;
+    String? picUrl = AuthController.instance.getUser!.photoURL;
+    picUrl = picUrl ?? Constants.demoAvatar;
     return Scaffold(
       backgroundColor: ThemeColor.backGround,
       appBar: AppBar(
@@ -38,9 +46,18 @@ class _HomePageState extends State<HomePage> {
         ),
         actions: [
           Container(
+            padding: const EdgeInsets.all(4),
             margin: const EdgeInsets.only(right: 12),
-            child: const CircleAvatar(
-              backgroundImage: AssetImage('assets/image/logo_home_247.png'),
+            child: GestureDetector(
+              onTap: () {
+                Get.to(const ProfileUser());
+              },
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(25),
+                child: CachedNetworkImage(
+                  imageUrl: picUrl,
+                ),
+              ),
             ),
           ),
         ],
@@ -49,18 +66,16 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            //Category 
-            CategoryBar(size: size),
             //Title
-            buildTitle('Now Playing'),
+            buildTitle('Đang Chiếu'),
             //Slider 
             SliderBar(size: size),
             //Title
-            buildTitle('Coming Soon'),
+            buildTitle('Sắp Chiếu'),
             //Coming soon 
             const ComingSoon(),
             //Title
-            buildTitle('Promo'),
+            buildTitle('Sự Kiện'),
             //Promo 
             Promo(size: size),
             Promo(size: size),

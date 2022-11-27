@@ -1,4 +1,4 @@
-import 'package:app_247_cinema/utils/theme.dart';
+import 'package:app_247_cinema/utils/theme_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 

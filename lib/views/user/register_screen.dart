@@ -3,7 +3,7 @@ import 'package:app_247_cinema/controller/input_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../utils/theme.dart';
+import '../../utils/theme_colors.dart';
 
 class Register extends StatefulWidget {
   const Register({super.key});
@@ -38,7 +38,7 @@ class _RegisterState extends State<Register> {
               const Padding(
                 padding: EdgeInsets.only(top: 23),
                 child: Text(
-                  "Register",
+                  "ĐĂNG KÝ",
                   style: TextStyle(
                     fontSize: 30,
                     color: Colors.black,
@@ -47,7 +47,7 @@ class _RegisterState extends State<Register> {
                 ),
               ),
               Text(
-                "Fill in your information",
+                "Điền đầy đủ thông tin!",
                 style: TextStyle(
                   fontSize: 23,
                   color: Colors.black.withOpacity(0.6),
@@ -76,7 +76,7 @@ class _RegisterState extends State<Register> {
                         ),
                         fillColor: ThemeColor.grayWhite,
                         filled: true,
-                        hintText: "Full Name",
+                        hintText: "Họ và Tên...",
                         hintStyle: const TextStyle(color: Colors.black54),
                       ),
                     ),
@@ -92,7 +92,7 @@ class _RegisterState extends State<Register> {
                           ),
                           fillColor: ThemeColor.grayWhite,
                           filled: true,
-                          hintText: "Phone Number",
+                          hintText: "Số Điện Thoại...",
                           hintStyle: const TextStyle(color: Colors.black54),
                         ),
                       ),
@@ -109,7 +109,7 @@ class _RegisterState extends State<Register> {
                           ),
                           fillColor: ThemeColor.grayWhite,
                           filled: true,
-                          hintText: "Email",
+                          hintText: "Email...",
                           hintStyle: const TextStyle(color: Colors.black54),
                         ),
                       ),
@@ -127,7 +127,7 @@ class _RegisterState extends State<Register> {
                           ),
                           fillColor: ThemeColor.grayWhite,
                           filled: true,
-                          hintText: "Password",
+                          hintText: "Mật Khẩu...",
                           hintStyle: const TextStyle(color: Colors.black54),
                         ),
                       ),
@@ -145,7 +145,7 @@ class _RegisterState extends State<Register> {
                           ),
                           fillColor: ThemeColor.grayWhite,
                           filled: true,
-                          hintText: "Confirm Password",
+                          hintText: "Nhập lại Mật Khẩu...",
                           hintStyle: const TextStyle(color: Colors.black54),
                         ),
                       ),
@@ -174,7 +174,7 @@ class _RegisterState extends State<Register> {
                           child: Padding(
                             padding: EdgeInsets.all(12),
                             child: Text(
-                              "Register",
+                              "Đăng Ký",
                               style: TextStyle(fontSize: 16),
                             ),
                           ),
@@ -201,7 +201,7 @@ class _RegisterState extends State<Register> {
                           child: Padding(
                             padding: EdgeInsets.all(12),
                             child: Text(
-                              "Back",
+                              "Trở về Đăng Nhập",
                               style: TextStyle(
                                   fontSize: 16, color: ThemeColor.backGround),
                             ),

@@ -1,8 +1,7 @@
 import 'dart:async';
-
-import 'package:app_247_cinema/view/pages/home/home.dart';
-import 'package:app_247_cinema/view/pages/user/login_screen.dart';
-import 'package:app_247_cinema/utils/theme.dart';
+import 'package:app_247_cinema/views/home_screen.dart';
+import 'package:app_247_cinema/views/user/login_screen.dart';
+import 'package:app_247_cinema/utils/theme_colors.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
@@ -42,46 +41,39 @@ class AuthController extends GetxController {
           email: email, password: password);
       isLogin = true;
       update();
-      Get.snackbar(
-        "Error",
-        "Register Success!!!",
-        snackPosition: SnackPosition.TOP,
-        backgroundColor: ThemeColor.white,
-        colorText: ThemeColor.black,
-        borderRadius: 12,
-        margin: const EdgeInsets.only(top: 12, left: 12, right: 12),
-      );
+      getSuccessSnackBar("Đăng ký thành công!!!");
     } on FirebaseAuthException catch (e) {
       //Define error
-      getErrorSnackBar("Account Creating Failed", e);
+      getErrorSnackBar("Đăng ký tài khoản thất bại!", e);
     }
   }
 
   void login(email, password) async {
     try {
+      await auth.signInWithEmailAndPassword(email: email, password: password);
       isLogin = true;
       update();
-      await auth.signInWithEmailAndPassword(email: email, password: password);
-      getSuccessSnackBar("Register Success!!!");
+      getSuccessSnackBar("Đăng nhập thành công!!!");
     } on FirebaseAuthException catch (e) {
       //Define error
-      getErrorSnackBar("", e);
+      getErrorSnackBar("Đăng nhập thất bại!", e);
     }
   }
 
   void forgotPassword(email) async {
     try {
       await auth.sendPasswordResetEmail(email: email);
-      getSuccessSnackBar("Reset mail sent successfully. Check Mail!!!");
+      getSuccessSnackBar(
+          "Gửi địa chỉ đặt mật khẩu thành công. Kiểm tra Mail!!!");
     } on FirebaseAuthException catch (e) {
       //Define error
-      getErrorSnackBar("Login Failed", e);
+      getErrorSnackBar("Gửi thất bại!", e);
     }
   }
 
   void getErrorSnackBar(String message, _) {
     Get.snackbar(
-      "Error",
+      "Lỗi",
       "$message\n${_.message}",
       snackPosition: SnackPosition.TOP,
       backgroundColor: ThemeColor.white,
@@ -93,7 +85,7 @@ class AuthController extends GetxController {
 
   void getSuccessSnackBar(String message) {
     Get.snackbar(
-      "Success",
+      "Thành công!",
       message,
       snackPosition: SnackPosition.TOP,
       backgroundColor: ThemeColor.white,

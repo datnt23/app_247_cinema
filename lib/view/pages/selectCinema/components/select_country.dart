@@ -1,5 +1,5 @@
 import 'package:app_247_cinema/src/constants/asset_path.dart';
-import 'package:app_247_cinema/utils/theme.dart';
+import 'package:app_247_cinema/utils/theme_colors.dart';
 import 'package:flutter/material.dart';
 
 class SelectCountry extends StatelessWidget {
@@ -23,7 +23,7 @@ class SelectCountry extends StatelessWidget {
           Expanded(
             child: TextField(
               decoration: InputDecoration(
-                hintText: 'Select Your Country',
+                hintText: 'Chọn địa điểm rạp phim...',
                 hintStyle: TextStyle(
                     fontWeight: FontWeight.w300,
                     fontSize: 18,

@@ -1,4 +1,4 @@
-import 'package:app_247_cinema/utils/theme.dart';
+import 'package:app_247_cinema/utils/theme_colors.dart';
 import 'package:app_247_cinema/view/pages/selectCinema/components/select_country.dart';
 import 'package:app_247_cinema/view/pages/selectCinema/select_seat_page.dart';
 import 'package:flutter/material.dart';
@@ -22,10 +22,10 @@ class SelectCinemaPage extends StatelessWidget {
           children: [
             CustomHeader(
               size: size,
-              content: 'Ralph Breaks the\nInternet ',
+              content: 'ONE PIECE FILM RED',
             ),
             SelectCountry(size: size),
-            buildTitle('Choose Date'),
+            buildTitle('Chọn Ngày'),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 24.0),
               child: Row(
@@ -37,7 +37,7 @@ class SelectCinemaPage extends StatelessWidget {
                     .toList(),
               ),
             ),
-            buildTitle('Central Park CGV'),
+            buildTitle('CGV Vincom Thủ Đức'),
             Container(
               margin: const EdgeInsets.only(top: 8, bottom: 16),
               height: size.height / 15,
@@ -48,7 +48,7 @@ class SelectCinemaPage extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
               ),
             ),
-            buildTitle('FX Sudirman XXI'),
+            buildTitle('CGV Vincom Gò Vấp'),
             Container(
               margin: const EdgeInsets.only(top: 8, bottom: 16),
               height: size.height / 15,
@@ -59,7 +59,7 @@ class SelectCinemaPage extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
               ),
             ),
-            buildTitle('Kelapa Gading IMAX'),
+            buildTitle('CGV Giga Mall Thủ Đức'),
             Container(
               margin: const EdgeInsets.only(top: 8, bottom: 16),
               height: size.height / 15,

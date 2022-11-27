@@ -54,4 +54,8 @@ class AssetPath {
   static const String btnFacebookx2 = '$prePath/2x/btn_facebook.png';
   static const String btnGooglex2 = '$prePath/2x/btn_google.png';
   static const String screenx2 = '$prePath/2x/screen.png';
+
+  static const String backgroundOnePiece = '$prePath/one_piece_red_background.png';
+  static const String posterOnePiece = '$prePath/one_piece_image.png';
+
 }
