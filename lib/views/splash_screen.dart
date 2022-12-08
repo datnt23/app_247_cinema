@@ -7,9 +7,14 @@ import 'package:page_transition/page_transition.dart';
 import 'home_screen.dart';
 
 
-class SplashScreen extends StatelessWidget {
+class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
 
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
@@ -25,7 +30,7 @@ class SplashScreen extends StatelessWidget {
             style: TextStyle(
                 fontSize: 40, fontWeight: FontWeight.bold, color: Colors.black),
           ),
-          Lottie.asset('assets/loading_circle.json', height: 40, width: 40),
+          Lottie.asset('assets/loading_circle.json', height: 30, width: 30),
         ],
       ),
       backgroundColor: ThemeColor.white,

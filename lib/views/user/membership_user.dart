@@ -1,12 +1,15 @@
 import 'package:app_247_cinema/controller/profile_controller.dart';
 import 'package:app_247_cinema/utils/theme_colors.dart';
+import 'package:app_247_cinema/views/pages/nav_bar.dart';
+import 'package:app_247_cinema/views/user/infor_user.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 
-import '../controller/auth_controller.dart';
-import '../utils/constants.dart';
+import '../../controller/auth_controller.dart';
+import '../../utils/constants.dart';
 
 class ProfileUser extends StatefulWidget {
   const ProfileUser({super.key});
@@ -57,11 +60,12 @@ class _ProfileUserState extends State<ProfileUser> with SingleTickerProviderStat
         centerTitle: true,
         elevation: 0,
       ),
+      endDrawer: const NavBar(),
       body: SizedBox(
         height: double.maxFinite,
         width: double.maxFinite,
         child: Stack(
-          children: [
+          children: <Widget>[
             Container(
               height: 200,
               width: double.maxFinite,
@@ -235,9 +239,29 @@ class _ProfileUserState extends State<ProfileUser> with SingleTickerProviderStat
                           ),
                         ),
                       ),
+                      
                       const Divider(
                         thickness: 3,
                         color: ThemeColor.backGround,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 30),
+                        child: ListTile(
+                          leading: const Icon(
+                            Icons.info_outline,
+                            size: 30,
+                            color: ThemeColor.backGround,
+                          ),
+                          title: const Text(
+                            'Thông tin tài khoản',
+                            style: TextStyle(
+                              color: ThemeColor.black,
+                              fontSize: 23,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
+                          onTap: () {Get.to(const InforUserPage());},
+                        ),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(left: 30),
@@ -256,27 +280,6 @@ class _ProfileUserState extends State<ProfileUser> with SingleTickerProviderStat
                             ),
                           ),
                           onTap: () {},
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 30),
-                        child: ListTile(
-                          leading: const Icon(
-                            Icons.logout,
-                            size: 23,
-                            color: ThemeColor.red,
-                          ),
-                          title: const Text(
-                            'Đăng xuất',
-                            style: TextStyle(
-                              color: ThemeColor.red,
-                              fontSize: 23,
-                              fontWeight: FontWeight.w400,
-                            ),
-                          ),
-                          onTap: () {
-                            AuthController.instance.signOut();
-                          },
                         ),
                       ),
                     ],

@@ -3,7 +3,7 @@ import 'package:app_247_cinema/utils/theme_colors.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import '../../selectCinema/select_cinema_page.dart';
+import '../select_cinema.dart';
 
 class SliderBar extends StatelessWidget {
   const SliderBar({super.key, required this.size});

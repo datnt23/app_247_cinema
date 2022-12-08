@@ -1,12 +1,11 @@
 import 'package:app_247_cinema/utils/theme_colors.dart';
+import 'package:app_247_cinema/views/pages/nav_bar.dart';
 import 'package:flutter/material.dart';
-import '../../../src/config/app_color.dart';
-import '../../../src/constants/asset_path.dart';
-import '../../../src/models/movie.dart';
-import 'check_out_page.dart';
-import 'components/arrow_back_button.dart';
-import 'components/movie_title.dart';
-import 'components/toggle_button.dart';
+import '../src/config/app_color.dart';
+import '../src/constants/asset_path.dart';
+import '../src/models/movie.dart';
+import 'check_out.dart';
+import '../view/pages/selectCinema/components/toggle_button.dart';
 
 class SelectSeatPage extends StatelessWidget {
   const SelectSeatPage({super.key});
@@ -16,12 +15,23 @@ class SelectSeatPage extends StatelessWidget {
     final Size size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: ThemeColor.backGround,
+      appBar: AppBar(
+        backgroundColor: ThemeColor.headerBackGround,
+        title: const Text(
+          "CGV Vincom Thủ Đức",
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 23,
+            color: ThemeColor.white,
+          ),
+        ),
+        elevation: 0,
+      ),
+      endDrawer: const NavBar(),
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const ArrowBackButton(),
-            const MovieTitle(),
             // seat status bar
             Padding(
               padding: const EdgeInsets.only(top: 24),
@@ -81,13 +91,21 @@ class SelectSeatPage extends StatelessWidget {
             ),
             Image.asset(AssetPath.screenx2),
             Padding(
-              padding: const EdgeInsets.only(left: 24, right: 24, bottom: 16),
+              padding: const EdgeInsets.only(left: 12, right: 12, bottom: 12),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: const [
+                      Text(
+                        "One Piece Film Red",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 23,
+                          color: ThemeColor.black,
+                        ),
+                      ),
                       Text(
                         'Tổng Tiền:',
                         style: TextStyle(
@@ -116,8 +134,8 @@ class SelectSeatPage extends StatelessWidget {
                               builder: (context) => const CheckOutPage()));
                     },
                     child: Container(
-                      height: size.height / 16,
-                      width: size.width / 3,
+                      height: size.height / 20,
+                      width: size.width / 4,
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
                           color: DarkTheme.blueMain,
@@ -129,7 +147,7 @@ class SelectSeatPage extends StatelessWidget {
                             fontSize: 23,
                             height: 1.2,
                             decoration: TextDecoration.none,
-                            color: ThemeColor.black),
+                            color: ThemeColor.white),
                       ),
                     ),
                   )

@@ -51,6 +51,7 @@ dependencies:
   json_serializable: ^6.5.4
   scroll_snap_list: ^0.9.1
   rubber: ^1.0.1
+  dots_indicator: ^2.1.0
   #Firebase auth and Firebase core
   firebase_core: ^2.2.0
   firebase_auth: ^4.1.2

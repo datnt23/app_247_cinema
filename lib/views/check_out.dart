@@ -2,9 +2,11 @@ import 'package:app_247_cinema/src/config/app_color.dart';
 import 'package:app_247_cinema/utils/theme_colors.dart';
 import 'package:app_247_cinema/view/pages/selectCinema/components/custom_header.dart';
 import 'package:app_247_cinema/view/pages/selectCinema/components/movie_info.dart';
+import 'package:app_247_cinema/views/home_screen.dart';
+import 'package:app_247_cinema/views/pages/nav_bar.dart';
 import 'package:flutter/material.dart';
 
-import '../../../src/constants/asset_path.dart';
+import '../src/constants/asset_path.dart';
 
 class CheckOutPage extends StatelessWidget {
   const CheckOutPage({super.key});
@@ -14,10 +16,22 @@ class CheckOutPage extends StatelessWidget {
     final Size size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: ThemeColor.backGround,
+      appBar: AppBar(
+        backgroundColor: ThemeColor.headerBackGround,
+        title: const Text(
+          "Thanh Toán",
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 23,
+            color: ThemeColor.white,
+          ),
+        ),
+        elevation: 0,
+      ),
+      endDrawer: const NavBar(),
       body: SafeArea(
         child: Column(
           children: [
-            CustomHeader(content: 'Kiểm Tra\nThông Tin Vé', size: size),
             Container(
               margin: const EdgeInsets.symmetric(horizontal: 24),
               padding: const EdgeInsets.symmetric(vertical: 24),
@@ -64,21 +78,32 @@ class CheckOutPage extends StatelessWidget {
                 ),
               ),
             ),
-            Expanded(
+            GestureDetector(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const HomePage()));
+              },
+              child: Padding(
+                padding: const EdgeInsets.only(top: 16),
                 child: Center(
-              child: Container(
-                height: size.height / 16,
-                width: size.width / 2,
-                decoration: BoxDecoration(
-                    color: DarkTheme.blueMain,
-                    borderRadius: BorderRadius.circular(20)),
-                alignment: Alignment.center,
-                child: const Text(
-                  'Đặt',
-                  style: TextStyle(fontWeight: FontWeight.w900, fontSize: 23, height: 1.2),
+                  child: Container(
+                    height: size.height / 15,
+                    width: size.width / 2,
+                    decoration: BoxDecoration(
+                        color: DarkTheme.blueMain,
+                        borderRadius: BorderRadius.circular(20)),
+                    alignment: Alignment.center,
+                    child: const Text(
+                      'Đặt',
+                      style: TextStyle(
+                          fontWeight: FontWeight.w900,
+                          fontSize: 23,
+                          height: 1.2),
+                    ),
+                  ),
                 ),
               ),
-            ),),
+            ),
           ],
         ),
       ),

@@ -1,12 +1,11 @@
 import 'package:app_247_cinema/utils/theme_colors.dart';
 import 'package:app_247_cinema/view/pages/selectCinema/components/select_country.dart';
-import 'package:app_247_cinema/view/pages/selectCinema/select_seat_page.dart';
+import 'package:app_247_cinema/views/select_seat.dart';
+import 'package:app_247_cinema/views/pages/nav_bar.dart';
 import 'package:flutter/material.dart';
-
-import '../../../src/config/app_color.dart';
-import '../../../src/models/movie.dart';
-import 'components/custom_header.dart';
-import 'components/next_button.dart';
+import '../src/config/app_color.dart';
+import '../src/models/movie.dart';
+import '../view/pages/selectCinema/components/next_button.dart';
 
 class SelectCinemaPage extends StatelessWidget {
   const SelectCinemaPage({super.key});
@@ -16,14 +15,22 @@ class SelectCinemaPage extends StatelessWidget {
     final Size size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: ThemeColor.backGround,
+      appBar: AppBar(
+        backgroundColor: ThemeColor.headerBackGround,
+        title: const Text(
+          "One Piece Film Red",
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 23,
+            color: ThemeColor.white,
+          ),
+        ),
+        elevation: 0,
+      ),
+      endDrawer: const NavBar(),
       body: SafeArea(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            CustomHeader(
-              size: size,
-              content: 'ONE PIECE FILM RED',
-            ),
             SelectCountry(size: size),
             buildTitle('Chọn Ngày'),
             Padding(
