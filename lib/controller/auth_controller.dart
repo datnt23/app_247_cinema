@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:app_247_cinema/views/home_screen.dart';
-import 'package:app_247_cinema/views/user/login_screen.dart';
 import 'package:app_247_cinema/utils/theme_colors.dart';
+import 'package:app_247_cinema/views/user/login_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';

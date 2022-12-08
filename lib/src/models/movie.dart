@@ -23,11 +23,13 @@ class Movie {
 
 final List<String> genres = [
   'All',
-  'Action',
+  'Crime',
   'Drama',
   'Honor',
   'Romance',
-  'Fantasy'
+  'Fantasy',
+  'Adventure',
+  
 ];
 
 final List<Movie> movies = [

@@ -34,7 +34,7 @@ class _SplashScreenState extends State<SplashScreen> {
         ],
       ),
       backgroundColor: ThemeColor.white,
-      nextScreen: const HomePage(),
+      nextScreen:  HomePage(),
       splashIconSize: 300,
       duration: 3000,
       splashTransition: SplashTransition.scaleTransition,

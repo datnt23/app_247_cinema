@@ -1,8 +1,6 @@
 import 'package:app_247_cinema/src/models/movie.dart';
+import 'package:app_247_cinema/views/pages/movie_detail.dart';
 import 'package:flutter/material.dart';
-
-import '../../movieDetail/movie_detail_page.dart';
-
 class ComingSoon extends StatelessWidget {
   const ComingSoon({super.key});
 
